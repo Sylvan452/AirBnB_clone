@@ -88,3 +88,5 @@ This is necessary when giving command to the console. There ia the need for it t
 
 In Interactive Mode the commands will need to be written with a keyboard when the prompt appears and will be recognized when an enter key is pressed (new line). As soon as this happens, the console will attempt to execute the command through several means or will show an error message if the command didn't run successfully.
 In this mode, the console can be exited using the CTRL + D combination, CTRL + C, or the command quit or EOF.
+
+Arguments
