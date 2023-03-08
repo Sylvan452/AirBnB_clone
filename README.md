@@ -3,10 +3,10 @@
 
 > The python objects(data) generated were stored in a json file which is to be accessed wth the help of python's json module.
 
-Description of the command interpreter
-The interface of the project is synonymous to a bash shell. However, the difference is in it's limited number of commands which were exclusively defined for this project - The AirBnB website clone.
+### Description of the command interpreter
+> The interface of the project is synonymous to a bash shell. However, the difference is in it's limited number of commands which were exclusively defined for this project - The AirBnB website clone.
 
-Therefore, we would refer the command line interpreter as the frontend of this project. This is the medium through which users can interact with the backend which we developed using Python's OOP.
+> Therefore, we would refer the command line interpreter as the frontend of this project. This is the medium through which users can interact with the backend which we developed using Python's OOP.
 
 Here are the available commands in this project
 
