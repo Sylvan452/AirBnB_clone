@@ -1,7 +1,7 @@
-Project Description
-This is the Part I of the AirBnB project. We worked on the backend of the project, using the console as an interface with the help of python's cmd module.
+### Project Description
+> This is the Part I of the AirBnB project. We worked on the backend of the project, using the console as an interface with the help of python's cmd module.
 
-The python objects(data) generated were stored in a json file which is to be accessed wth the help of python's jason module.
+> The python objects(data) generated were stored in a json file which is to be accessed wth the help of python's json module.
 
 Description of the command interpreter
 The interface of the project is synonymous to a bash shell. However, the difference is in it's limited number of commands which were exclusively defined for this project - The AirBnB website clone.
