@@ -35,3 +35,29 @@ class BaseModel():
             self.id = str(uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
+            """a code to save this data peramanently comes here """
+
+    def __str__(self):
+        """ Returns string info about class """
+        info = '[{}] ({}) {}'.format(self.__class__.__name__, self.id,
+                                     self.__dict__)
+        return info
+
+    def save(self):
+        """updates the public instance attribute updated_at with the current
+           datetime
+        """
+        self.updated_at = datetime.now()
+        """ code to save it permanently goes here"""
+
+    def to_dict(self):
+        """ returns a dictionary containing all keys/values of __dict__ of the
+            instance"""
+        new_dict = {}
+        new_dict["__class__"] = self.__class__.__name__
+        for key, val in self.__dict__.items():
+            if isinstance(val, (datetime, )):
+                new_dict[key] = val.isoformat()
+            else:
+                new_dict[key] = val
+        return new_dict
