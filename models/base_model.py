@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 from uuid import uuid4
 from datetime import datetime
+import models
 
 """
     BaseModel- parent of all classes in this project
@@ -35,7 +36,8 @@ class BaseModel():
             self.id = str(uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
-            """a code to save this data peramanently comes here """
+            models.storage.new(self)
+
 
     def __str__(self):
         """ Returns string info about class """
@@ -48,7 +50,7 @@ class BaseModel():
            datetime
         """
         self.updated_at = datetime.now()
-        """ code to save it permanently goes here"""
+        models.storage.save()
 
     def to_dict(self):
         """ returns a dictionary containing all keys/values of __dict__ of the
