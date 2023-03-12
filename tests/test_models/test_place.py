@@ -68,6 +68,18 @@ class TestUser(unittest.TestCase):
         self.assertEqual(type(self.place1.name), str)
         self.assertEqual(type(self.place1.city_id), str)
         self.assertEqual(type(self.place1.user_id), str)
+
+    def test_is_subclass(self):
+        self.assertTrue(issubclass(self.place1.__class__, BaseModel), True)
+
+    def test_checking_for_functions(self):
+        self.assertIsNotNone(Place.__doc__)
+
+
+    def test_attributes_are_strings(self):
+        self.assertEqual(type(self.place1.city_id), str)
+        self.assertEqual(type(self.place1.user_id), str)
+        self.assertEqual(type(self.place1.name), str)
         self.assertEqual(type(self.place1.description), str)
         self.assertEqual(type(self.place1.number_rooms), int)
         self.assertEqual(type(self.place1.number_bathrooms), int)
@@ -87,4 +99,3 @@ class TestUser(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-
