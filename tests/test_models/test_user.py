@@ -34,4 +34,8 @@ class TestUser(unittest.TestCase):
         self.assertEqual(result.total_errors, 0, "Fix pep8")
     
     def test_is_subclass(self):
+        """ checks if the class is a subclass of BaseModel """
         self.assertTrue(issubclass(self.my_user.__class__, BaseModel), True)
+
+    def test_for_functions(self):
+        self.assertIsNotNone(User.__doc__)
