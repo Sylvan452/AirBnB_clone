@@ -14,7 +14,7 @@ class TestUser(unittest.TestCase):
         cls.place1 = Place()
         cls.place1.city_id = "someplace in the east"
         cls.place1.user_id = "Denver"
-        cls.place1.name  = "Idaholo"
+        cls.place1.name = "Idaholo"
         cls.place1.description = "lively embrace of nature"
         cls.place1.number_rooms = 1
         cls.place1.number_bathrooms = 1
@@ -39,7 +39,7 @@ class TestUser(unittest.TestCase):
         style = pycodestyle.StyleGuide(quiet=True)
         result = style.check_files(['models/place.py'])
         self.assertEqual(result.total_errors, 0, "Fix pep8")
-    
+
     def test_is_subclass(self):
         """ checks if the class is a subclass of BaseModel """
         self.assertTrue(issubclass(self.place1.__class__, BaseModel), True)
@@ -63,7 +63,6 @@ class TestUser(unittest.TestCase):
         self.assertTrue("longitude" in self.place1.__dict__)
         self.assertTrue("amenity_ids" in self.place1.__dict__)
 
-
     def test_attrbutes(self):
         self.assertEqual(type(self.place1.name), str)
         self.assertEqual(type(self.place1.city_id), str)
@@ -74,7 +73,6 @@ class TestUser(unittest.TestCase):
 
     def test_checking_for_functions(self):
         self.assertIsNotNone(Place.__doc__)
-
 
     def test_attributes_are_strings(self):
         self.assertEqual(type(self.place1.city_id), str)

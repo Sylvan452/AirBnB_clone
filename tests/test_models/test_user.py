@@ -32,7 +32,7 @@ class TestUser(unittest.TestCase):
         style = pycodestyle.StyleGuide(quiet=True)
         result = style.check_files(['models/user.py'])
         self.assertEqual(result.total_errors, 0, "Fix pep8")
-    
+
     def test_is_subclass(self):
         """ checks if the class is a subclass of BaseModel """
         self.assertTrue(issubclass(self.my_user.__class__, BaseModel), True)
@@ -65,4 +65,3 @@ class TestUser(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-

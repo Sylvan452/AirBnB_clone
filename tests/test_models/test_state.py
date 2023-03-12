@@ -29,7 +29,7 @@ class TestUser(unittest.TestCase):
         style = pycodestyle.StyleGuide(quiet=True)
         result = style.check_files(['models/state.py'])
         self.assertEqual(result.total_errors, 0, "Fix pep8")
-    
+
     def test_is_subclass(self):
         """ checks if the class is a subclass of BaseModel """
         self.assertTrue(issubclass(self.states.__class__, BaseModel), True)
@@ -42,7 +42,6 @@ class TestUser(unittest.TestCase):
         self.assertTrue("name" in self.states.__dict__)
         self.assertTrue("created_at" in self.states.__dict__)
         self.assertTrue("updated_at" in self.states.__dict__)
-
 
     def test_attrbutesAreStrings(self):
         self.assertEqual(type(self.states.name), str)
@@ -57,4 +56,3 @@ class TestUser(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-

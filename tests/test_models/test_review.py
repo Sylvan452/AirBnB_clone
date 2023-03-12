@@ -31,7 +31,7 @@ class TestUser(unittest.TestCase):
         style = pycodestyle.StyleGuide(quiet=True)
         result = style.check_files(['models/review.py'])
         self.assertEqual(result.total_errors, 0, "Fix pep8")
-    
+
     def test_is_subclass(self):
         """ checks if the class is a subclass of BaseModel """
         self.assertTrue(issubclass(self.reviews.__class__, BaseModel), True)
@@ -46,7 +46,6 @@ class TestUser(unittest.TestCase):
         self.assertTrue("updated_at" in self.reviews.__dict__)
         self.assertTrue("user_id" in self.reviews.__dict__)
         self.assertTrue("text" in self.reviews.__dict__)
-
 
     def test_attrbutesAreStrings(self):
         self.assertEqual(type(self.reviews.user_id), str)
@@ -63,4 +62,3 @@ class TestUser(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-
