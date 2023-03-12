@@ -44,7 +44,6 @@ class TestUser(unittest.TestCase):
         self.assertTrue("email" in self.my_user.__dict__)
         self.assertTrue("id" in self.my_user.__dict__)
         self.assertTrue("created_at" in self.my_user.__dict__)
-        self.assertTrue("created_at" in self.my_user.__dict__)
         self.assertTrue("password" in self.my_user.__dict__)
         self.assertTrue("updated_at" in self.my_user.__dict__)
         self.assertTrue("first_name" in self.my_user.__dict__)
