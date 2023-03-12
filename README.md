@@ -1,4 +1,4 @@
-### Project Description
+git clone https://github.com/Preshfile/AirBnB_clone### Project Description
 > This is the Part I of the AirBnB project. We worked on the backend of the project, using the console as an interface with the help of python's cmd module.
 
 > The python objects(data) generated were stored in a json file which is to be accessed wth the help of python's json module.
@@ -29,7 +29,7 @@ Installing
 To install this program, there is the need to clone the repository from github
 includes the shell program and associated dependencies. You will need to clone the repository of the project from Github. This will contain the simple shell program and all of its dependencies. Below are simple steps you can follow to install the program:
 
-        git clone https://github.com/Preshfile/AirBnB_clone.git
+        git clone https://github.com/sylvan452/AirBnB_clone.git
 Once the cloning is done, you will have a folder containing the the AirBnB project. In this folder, you're expected to see several files with which the program can run. They include:
 
 /console.py : The main executable of the project, the command interpreter.
