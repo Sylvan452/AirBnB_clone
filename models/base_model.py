@@ -38,7 +38,6 @@ class BaseModel():
             self.updated_at = datetime.now()
             models.storage.new(self)
 
-
     def __str__(self):
         """ Returns string info about class """
         info = '[{}] ({}) {}'.format(self.__class__.__name__, self.id,
