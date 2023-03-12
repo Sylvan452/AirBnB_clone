@@ -50,4 +50,8 @@ class TestUser(unittest.TestCase):
         self.assertTrue("first_name" in self.my_user.__dict__)
         self.assertTrue("last_name" in self.my_user.__dict__)
 
-
+    def test_attrbutesAreStrings(self):
+        self.assertEqual(type(self.my_user.email), str)
+        self.assertEqual(type(self.my_user.password), str)
+        self.assertEqual(type(self.my_user.first_name), str)
+        self.assertEqual(type(self.my_user.last_name), str)
