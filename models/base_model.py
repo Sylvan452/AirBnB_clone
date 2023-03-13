@@ -21,7 +21,7 @@ class BaseModel():
     def __init__(self, *args, **kwargs):
         """ Initializes the class with a random uuid, update/create dates """
         if kwargs:
-            for key, val in kwargs.item():
+            for key, val in kwargs.items():
                 if key == "created_at":
                     self.created_at = datetime.strptime(kwargs["created_at"],
                                                         "%Y-%m-%dT%H:%M:%S.%f")
