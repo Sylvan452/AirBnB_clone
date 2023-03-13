@@ -2,7 +2,7 @@
 import cmd
 
 class HBNBCommand(cmd.Cmd):
-    """ class for the console"""
+    """ Entry into the console"""
     prompt = "(hbnb)"
 
     def do_EOF(self, line):
@@ -11,7 +11,7 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     def do_quit(self, line):
-        """EXits on quit """
+        """Quit command to exit the program"""
         return True
 
     def emptyline(self):
