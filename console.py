@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Console for Airbnb clone """
 import cmd
 
 
