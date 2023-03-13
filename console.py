@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import cmd
 
+
 class HBNBCommand(cmd.Cmd):
     """ Entry into the console"""
     prompt = "(hbnb)"
@@ -17,6 +18,7 @@ class HBNBCommand(cmd.Cmd):
     def emptyline(self):
         """executes when an empty line is passed"""
         pass
+
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
