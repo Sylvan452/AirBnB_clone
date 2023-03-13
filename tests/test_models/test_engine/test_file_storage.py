@@ -23,13 +23,13 @@ class TestFileStorage(unittest.TestCase):
         cls.state.name = "Lagos"
 
     @classmethod
-    def teardown(cls):
+    def tearDownClass(cls):
         del cls.state
 
     def teardown(self):
         try:
             os.remove("file.json")
-        except:
+        except FileNotFoundError:
             pass
 
     def test_conformance(self):
@@ -52,16 +52,15 @@ class TestFileStorage(unittest.TestCase):
         my_user.id = "20383"
         my_user.name = "Sean"
         n_storage.new(my_user)
-        key = my_user.__class__.__name__+ "." + str(my_user.id)
+        key = my_user.__class__.__name__ + "." + str(my_user.id)
         self.assertIsNotNone(instance_dict[key])
 
-   
     def test_reload(self):
         r_storage = FileStorage()
         try:
             os.remove("file.json")
-        except:
+        except FileNotFoundError:
             pass
         with open("file.json", "w") as file:
             file.write("{}")
-        self.assertIs(r_storage.reload(), None)            
+        self.assertIs(r_storage.reload(), None)
