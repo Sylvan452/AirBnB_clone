@@ -26,6 +26,7 @@
 | `count`  | `User.count()`                    | returns count of objects in class      |
 | `quit`   | `quit`                            | exits                                  | 
 | `EOF`    | `EOF`                             | prints a new line and exits            |
+| `clear`  | `clear`                           | clear screen                           |
 
 #### Installation
 ```
