@@ -9,6 +9,7 @@ from models.place import Place
 from models.review import Review
 from models.state import State
 from models.city import City
+import os
 
 
 class HBNBCommand(cmd.Cmd):
@@ -130,6 +131,10 @@ class HBNBCommand(cmd.Cmd):
         else:
             print("** value missing **")
             return
+
+    def do_clear(self, args):
+        '''Behaves like clear in shell'''
+        os.system('clear')
 
 
 if __name__ == "__main__":
