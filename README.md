@@ -4,8 +4,8 @@
 > This is the first phase of the Airbnb clone: The Console.
 > This repository holds a Command Interpreter that makes backend operations
 > easier.
-> This repository also holds the base classes (i.e the BaseModel class and
-> various other classes that inherits from it) and also a storage file that
+> This repository also holds the base classes (i.e the BaseModel class) and
+> various other classes that inherits from it (e.g User,Place), and also a storage file that
 > temporary holds operation data in place of a Database.
 > The Command Interpreter, like a shell, can be activated, take in user input
 > and perform certain tasks in manipulating object instances.
