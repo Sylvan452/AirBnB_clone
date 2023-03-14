@@ -136,6 +136,19 @@ class HBNBCommand(cmd.Cmd):
         '''Behaves like clear in shell'''
         os.system('clear')
 
+    def do_count(self, args):
+        '''counts the number of class an instance occurs'''
+        if args in self.classes:
+            count = 0
+            for key, val in storage.all().items():
+                if args in key:
+                    count += 1
+            print(count)
+            return
+        else:
+            print("** class doesn't exist **")
+            return
+
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
