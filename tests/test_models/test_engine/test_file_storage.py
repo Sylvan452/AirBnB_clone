@@ -64,3 +64,16 @@ class TestFileStorage(unittest.TestCase):
         with open("file.json", "w") as file:
             file.write("{}")
         self.assertIs(r_storage.reload(), None)
+
+    def test_save(self):
+        s_storage = FileStorage()
+        new_city = City()
+        new_city.state_id = "ABuja"
+        new_city.name = "Zembo"
+        s_storage.new(new_city)
+        s_storage.save()
+        with open("file.json", 'r') as f:
+            data = json.load(f)
+            self.assertIn('City.{}'.format(new_city.id), data)
+            self.assertEqual(data['City.{}'.format(new_city.id)],
+                             new_city.to_dict())
