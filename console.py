@@ -149,6 +149,56 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
             return
 
+    def default(self, args):
+        '''Accept class_name and method; e.g: User.count()'''
+        if len(args) == 1:
+            print("*** Unknown syntax: {}".format(args))
+            return
+        args = args.split('.')
+        class_arg = args[0]
+        try:
+            args = args[1].split('(')  # resets args to start form args[1]
+            command = args[0]  # e.g - count, all
+
+            if command == 'all':
+                HBNBCommand.do_all(self, class_arg)
+
+            elif command == 'count':
+                HBNBCommand.do_count(self, class_arg)
+
+            elif command == 'show':
+                args = args[1].split(')')
+                id_arg = args[0]
+                id_arg = id_arg.strip('"')
+                id_arg = id_arg.strip("'")
+                arg = class_arg + ' ' + id_arg
+                HBNBCommand.do_show(self, arg)
+
+            elif command == 'destroy':
+                args = args[1].split(')')
+                id_arg = args[0]
+                id_arg = id_arg.strip('"')
+                id_arg = id_arg.strip("'")
+                arg = class_arg + ' ' + id_arg
+                HBNBCommand.do_destroy(self, arg)
+
+            elif command == 'update':
+                args = args[1].split(',')
+                id_arg = args[0].strip('"')
+                id_arg = id_arg.strip("'")
+                name_arg = args[1].strip(',')
+                name_arg = name_arg.strip("'").strip('"')
+                name_arg = name_arg.strip(' ')
+                val_arg = args[2].strip(' ')
+                val_arg = val_arg.strip(')')
+                arg = class_arg + ' ' + id_arg + ' ' + name_arg + ' ' + val_arg
+                HBNBCommand.do_update(self, arg)
+
+            else:
+                print("*** Unknown syntax: {}".format(args))
+        except IndexError:
+            print("*** Unknown syntax: {}".format(args))
+
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
