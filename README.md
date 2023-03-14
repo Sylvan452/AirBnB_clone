@@ -1,5 +1,5 @@
 ### Airbnb Clone
-<br>
+
 #### Description
 > This is the first phase of the Airbnb clone: The Console.
 > This repository holds a Command Interpreter that makes backend operations
@@ -61,4 +61,4 @@ EOF  all  clear  count  create  destroy  help  quit  show  update
 ### Environment
 * Language: Python3
 * OS: Ubuntu 20.04 LTS
-* Style guidelines: [Pycodestyle (version 2.8)](https://pycodestyle.pycqa.org/en/2.8.0/)\
+* Style guidelines: [Pycodestyle (version 2.8)](https://pycodestyle.pycqa.org/en/2.8.0/)
