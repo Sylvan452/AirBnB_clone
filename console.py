@@ -31,7 +31,9 @@ class HBNBCommand(cmd.Cmd):
         pass
 
     def do_create(self, line):
-        """creates an instance of BaseModel, line contains the class"""
+        """creates an instance of BaseModel
+           Usage: create <class_name>
+        """
         if len(line) == 0:
             print("** class name missing **")
         elif line not in self.classes:
@@ -60,6 +62,44 @@ class HBNBCommand(cmd.Cmd):
                 print("** no instance found **")
             else:
                 print(storage.all()[name])
+
+    def do_destroy(self, args):
+        """deletes an instance based on class name and id"""
+        if len(args) == 0:
+            print("** class name missing **")
+            return
+        args = args.split()
+        if args[0] not in self.classes:
+            print("** class doesn't exist **")
+            return
+        elif len(args) < 2:
+            print("** instance id missing **")
+            return
+        if args[1]:
+            instance = "{}.{}".format(args[0], args[1])
+            if instance not in storage.all().keys():
+                print("** no instance found **")
+            else:
+                del storage.all()[instance]
+                storage.save()
+
+    def do_all(self, args):
+        '''prints all str representation of an instance based on class name'''
+        all_list = []
+        if len(args) == 0:
+            for obj in storage.all().values():
+                all_list.append(str(obj))
+            print(all_list)
+            return
+        args = args.split()
+        if args[0] not in self.classes:
+            print("** class doesn't exist **")
+            return
+        else:
+            for key, obj in storage.all().items():
+                if args[0] in key:
+                    all_list.append(str(obj))
+            print(all_list)
 
 
 if __name__ == "__main__":
