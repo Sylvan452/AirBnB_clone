@@ -12,21 +12,21 @@
 
 #### How to use the Command Interpreter
 ---
-| Commands | Sample Usage                      | Functionality                          |
-| -------- | --------------------------------- | -------------------------------------- |
-| `help`   | `help`                            | display all commands available         |
-| `help`   |  `help command`                   | displays information about the command |
-| `create` | `create <class>`                  | creates a new object                   |
-| `show`   | `show User 123-323`               | retrieves an object from the database  |
-| `show`   | `User.show("123-454")`            | does the same as above                 |
-| `update` | `update User 2223 name "John"     | updates attribute of an object         |
-| `update` | `User.update("22", "name", "john"`| does the same as above                 |
-| `all`    | `User.all()`                      | displays all objects in class          |
-| `destroy`| `User.destroy(123-123)`           | deletes specified object               |
-| `count`  | `User.count()`                    | returns count of objects in class      |
-| `quit`   | `quit`                            | exits                                  | 
-| `EOF`    | `EOF`                             | prints a new line and exits            |
-| `clear`  | `clear`                           | clear screen                           |
+| Commands | Sample Usage                       | Functionality                          |
+| -------- | ---------------------------------  | -------------------------------------- |
+| `help`   | `help`                             | display all commands available         |
+| `help`   |  `help command`                    | displays information about the command |
+| `create` | `create <class>`                   | creates a new object                   |
+| `show`   | `show User 123-323`                | retrieves an object from the database  |
+| `show`   | `User.show("123-454")`             | does the same as above                 |
+| `update` | `update User 2223 name "John"      | updates attribute of an object         |
+| `update` | `User.update("22", "name", "john")`| does the same as above                 |
+| `all`    | `User.all()`                       | displays all objects in class          |
+| `destroy`| `User.destroy(123-123)`            | deletes specified object               |
+| `count`  | `User.count()`                     | returns count of objects in class      |
+| `quit`   | `quit`                             | exits                                  | 
+| `EOF`    | `EOF`                              | prints a new line and exits            |
+| `clear`  | `clear`                            | clear screen                           |
 
 #### Installation
 ```
