@@ -1,6 +1,6 @@
 ### Airbnb Clone
 <br>
-#### Description<br>
+#### Description
 > This is the first phase of the Airbnb clone: The Console.
 > This repository holds a Command Interpreter that makes backend operations
 > easier.
